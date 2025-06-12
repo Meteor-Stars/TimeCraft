@@ -96,10 +96,17 @@ conda env create -f environment.yaml
 ```
 
 ### 2. How to Use Data
+#### 2.1 Supported Public Datasets
 
-For time series generation with or without condition. Use the provided script `prepare_datasets.py` to download, process, and format your raw data into the required CSV or NumPy array formats compatible with TimeCraft utilities.
+TimeCraft includes automatic support for downloading and preprocessing several publicly available datasets, for example:
 
-#### Downloading and Processing Datasets
+- [Temperature and Rain Dataset (Monash)](https://zenodo.org/records/5129091/files/temperature_rain_dataset_without_missing_values.zip?download=1)
+- [Wind Dataset (4-Second Interval)](https://zenodo.org/records/4656032/files/wind_4_seconds_dataset.zip?download=1)
+- [Pedestrian Counts Dataset](https://zenodo.org/records/4656626/files/pedestrian_counts_dataset.zip?download=1)
+
+You can manually download these datasets from the links above, or simply run the `prepare_datasets.py` script, which automates the download, extraction, and transformation into model-ready formats.
+
+### 2.2 Downloading and Processing Datasets
 
 Run the following command to execute the script:
 
@@ -107,14 +114,27 @@ Run the following command to execute the script:
 python TimeDP/utils/prepare_datasets.py
 ```
 
-This script will perform the following tasks:
-- Download datasets including Monash University datasets (`temprain`, `wind_4_seconds`, `pedestrian`) and the TimeGAN stock dataset.
-- Generate CSV files from predefined datasets such as solar, electricity, traffic, and others.
-- Segment data into training and validation sets with varying sequence lengths (24, 96, 168, 336) and save them as NumPy arrays.
+This script performs several preprocessing steps:
 
+1. **Dataset Download**:
+   - Automatically fetches public datasets from sources like Zenodo (e.g., Monash TSF datasets for temperature/rain, wind, and pedestrian counts).
+   - Loads benchmark datasets (e.g., solar, electricity, traffic) using GluonTS.
+   - Also retrieves example financial time series from the TimeGAN repository (e.g., stock prices).
 
-Your generated textual outputs will now be available in the specified output directory, ready for further analysis or utilization in downstream tasks.
+2. **Data Preprocess**:
+   - Concatenates train and test splits to form a complete time series.
+   - Saves a multivariate series into a time-indexed CSV format under `./data/`.
+   - Converts `.tsf` (Time Series Format) files into pandas DataFrames.
+   - Extracts series based on feature tags like `PRCP_SUM` for rain or `T_MEAN` for temperature.
 
+3. **Sliding Window Segmentation**:
+   - For each dataset, applies sliding window segmentation with various sequence lengths (`24, 96, 168, 336`).
+   - Each window forms a data sample of fixed length.
+   - Outputs `.npy` files for training and validation sets (e.g., `electricity_96_train.npy`).
+
+4. **Zero-shot Setup (Optional)**:
+   - For selected datasets like `stock` and `web`, prepares fixed test and prompt samples for zero-shot evaluation.
+   - Saves prompt/test slices and exports prompt sequences to CSV for inspection.
 
 ### 3. Preparation for text controlled generation (Optional)  
 #### 3.1 Get text templates 
