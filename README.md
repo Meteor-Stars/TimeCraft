@@ -106,7 +106,7 @@ TimeCraft includes automatic support for downloading and preprocessing several p
 
 You can manually download these datasets from the links above, or simply run the `prepare_datasets.py` script, which automates the download, extraction, and transformation into model-ready formats.
 
-### 2.2 Downloading and Processing Datasets
+#### 2.2 Downloading and Processing Datasets
 
 Run the following command to execute the script:
 
