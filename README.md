@@ -156,13 +156,36 @@ Dataset split details can be found here: [Dataset Split](supplementary/dataset_s
 
 ### 4. Preparation for target-aware generation (Optional) 
 
-#### 4.1 Prepare the Guidance Set  
+#### 4.1 TarDiff Data & Pre-processing
+
+1. **Pre-processing description**
+   Detailed instructions describing how raw MIMIC-III data was processed into the format suitable for our models are provided in `supplementary/mimiciii_prepare.md`.
+   Follow these instructions to replicate the preprocessing and feature extraction pipeline used in our experiments.
+
+2. **Dataset download**
+   You can access the raw datasets at the following links:
+
+   * [eICU Collaborative Research Database](https://eicu-crd.mit.edu/)
+
+   * [MIMIC-III Clinical Database](https://physionet.org/content/mimiciii/1.4/)
+
+   > **Note:** Both datasets require prior approval and credentialing before download.
+
+   Our focus is specifically on the multivariate time-series records available in these datasets.
+
+3. **Default data format**
+   By default, the data loaders expect a pickled **tuple** containing:
+
+   * `data`: shape **(N, F, T)**, representing *N* samples, *F* features, and *T* time steps.
+   * `labels`: shape **(N,)**, corresponding labels for each sample.
+
+#### 4.2 Prepare the Guidance Set  
 
 TarDiff requires a **guidance set** whose distribution closely approximates that of the downstream task targets. This distributional alignment allows the model to steer the diffusion process toward generating data that is more relevant and useful for downstream applications.  
 
 In our demo setting, we simply use the **training set** as a proxy for the guidance set. Users can later replace it with a more customized subset based on attribution methods (e.g., influence scores, gradient similarity) if desired.
 
-#### 4.2 Prepare the downstream model for guidance  
+#### 4.3 Prepare the downstream model for guidance  
 
 TarDiff requires a downstream model to compute gradients that guide the diffusion process toward generating task-relevant data.  
 To achieve optimal utility, users are encouraged to use their **own downstream models** that best reflect the real application scenario (e.g., mortality prediction, sepsis detection).
