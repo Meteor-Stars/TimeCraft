@@ -165,7 +165,7 @@ At the core of **TimeCraft** lies the concept of **Time Series Prototypes**—a 
 
 Each prototype represents a fundamental time series component, and by **learning, combining, and reassembling these units**, **TimeCraft** achieves strong **cross-domain adaptability**. This innovative approach enables the model to generate realistic and domain-consistent time series, even in fields with limited available data.  
 
-![Prototype Like Word.](./figures/pt_like_word_small.png)
+![Prototype Like Word.](./figures/pt_like_word_newcolors.png)
 
 ### Few-shot Prompting for Time Series Generation 
 
