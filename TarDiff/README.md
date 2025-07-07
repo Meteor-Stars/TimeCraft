@@ -12,7 +12,7 @@ Synthetic Electronic Health Record (EHR) time-series generation is crucial for a
 
 Prepare TarDiff's environment.
 ```
-conda env create -f environment.yaml
+conda env create -f environment.yml
 conda activate tardiff
 ```
 

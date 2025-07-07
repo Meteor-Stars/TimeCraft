@@ -276,7 +276,7 @@ def nondefault_trainer_args(opt):
 
 if __name__ == "__main__":
 
-    data_root = '/home/v-dengbowen/mount/'
+    data_root = 'data/'
     now = datetime.datetime.now().strftime("%Y-%m-%dT%H-%M-%S")
 
     sys.path.append(os.getcwd())
@@ -301,8 +301,9 @@ if __name__ == "__main__":
     # init and save configs
     configs = [OmegaConf.load(cfg) for cfg in opt.base]
     cli = OmegaConf.from_dotlist(unknown)
-    config = OmegaConf.merge(*configs, cli)
-
+    if unknown:
+        print(f"Ignoring unknown CLI overrides: {unknown}")
+    config = OmegaConf.merge(*configs)
     # Customize config from opt:
     n_data = len(config.data['params']['data_path_dict'])
     config.model['params']['image_size'] = opt.seq_len

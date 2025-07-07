@@ -92,7 +92,7 @@ Compared to other methods, TarDiff consistently generates data that leads to bet
 ### 1. Environment setups 
 Clone this repository and setup enviroment.
 ```bash
-conda env create -f environment.yaml
+conda env create -f environment.yml
 ```
 
 ### 2. How to Use Data
