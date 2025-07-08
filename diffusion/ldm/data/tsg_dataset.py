@@ -3,6 +3,7 @@
 
 from torch.utils.data import Dataset, DataLoader
 import pytorch_lightning as pl
+import torch.nn
 import numpy as np
 from datetime import datetime
 import pandas as pd

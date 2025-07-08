@@ -7,7 +7,7 @@ In this repository, we provide the core codes of [DiGA](https://arxiv.org/pdf/24
 ### Prerequisites
 We recommend to use conda environment. The required packages can be install with:
 ```python
-conda env create --file environment.yaml
+conda env create --file environment.yml
 ```
 After installation, use `conda activate diga` for activating the conda environment.
 

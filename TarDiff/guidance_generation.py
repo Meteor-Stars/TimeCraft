@@ -294,14 +294,14 @@ def get_parser(**parser_kwargs):
                         default='',
                         nargs="?",
                         help="ckpt path for diffusion")
-    parser.add_argument("-dp",
+    parser.add_argument("-pp",
                         "--downstream_pth_path",
                         type=str,
                         const=True,
                         default='',
                         nargs="?",
                         help="ckpt path for downstream model")
-    parser.add_argument("-sp",
+    parser.add_argument("-sv",
                         "--save_path",
                         type=str,
                         const=True,
@@ -333,7 +333,7 @@ if __name__ == "__main__":
     parser = Trainer.add_argparse_args(parser)
 
     opt, unknown = parser.parse_known_args()
-
+    opt.save_path_origin = opt.save_path
     if opt.name:
         name = opt.name
     elif opt.base:
