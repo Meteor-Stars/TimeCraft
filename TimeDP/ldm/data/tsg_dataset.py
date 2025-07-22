@@ -66,7 +66,7 @@ class TSGDataModule(pl.LightningDataModule):
     Data module for unified time series generation task.
     Slicing is also done with this module. So the train/val is i.i.d within train dataset.
     '''
-    def __init__(self, data_path_dict, window=96, val_portion=0.1, as_tensor:bool=True, normalize="centered_pit", batch_size=128, num_workers=0, pin_memory=True, drop_last=False, reweight=False, **kwargs):
+    def __init__(self, data_path_dict, window=96, val_portion=0.1, as_tensor:bool=True, normalize="centered_pit", batch_size=128, num_workers=0, pin_memory=True, drop_last=False, reweight=False, input_channels=1, **kwargs):
         super().__init__()
         self.data_path_dict = data_path_dict  # {data_name: data_path}
         self.data_dict = {}
@@ -88,6 +88,7 @@ class TSGDataModule(pl.LightningDataModule):
         self.val_dataset = None
         self.test_dataset = None
         self.reweight = reweight
+        self.input_channels = input_channels
         # self.transform = None
         self.kwargs = kwargs
         self.key_list = []

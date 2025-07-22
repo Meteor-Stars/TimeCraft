@@ -68,22 +68,22 @@ Use `main_train.py` for model training and `visualize.py` for domain prompt visu
 ## Usage
 Training TimeDP:
 ```bash
-python main_train.py --base configs/multi_domain_tsgen.yaml --gpus 0, --logdir ./logs/ -sl 168 -up -nl 16 --batch_size 128 -lr 0.0001 -s 0
+python main_train.py --base configs/multi_domain_timedp.yaml --gpus 0, --logdir ./logs/ -sl 168 -up -nl 16 --batch_size 128 -lr 0.0001 -s 0
 ```
 
 Training without PAM:
 ```bash
-python main_train.py --base configs/multi_domain_tsgen.yaml --gpus 0, --logdir ./logs/ -sl 168 --batch_size 128 -lr 0.0001 -s 0
+python main_train.py --base configs/multi_domain_timedp.yaml --gpus 0, --logdir ./logs/ -sl 168 --batch_size 128 -lr 0.0001 -s 0
 ```
 
 Training without domain prompts (unconditional generation model):
 ```bash
-python main_train.py --base configs/multi_domain_tsgen.yaml --gpus 0, --logdir ./logs/ -sl 168 --batch_size 128 -lr 0.0001 -s 0 --uncond
+python main_train.py --base configs/multi_domain_timedp.yaml --gpus 0, --logdir ./logs/ -sl 168 --batch_size 128 -lr 0.0001 -s 0 --uncond
 ```
 
 Visualization of domain prompts:
 ```bash
-python visualize.py --base configs/multi_domain_tsgen.yaml --gpus 0, --logdir ./logs/ -sl 168 --batch_size 128 -lr 0.0001 -s 0 --uncond
+python visualize.py --base configs/multi_domain_timedp.yaml --gpus 0, --logdir ./logs/ -sl 168 --batch_size 128 -lr 0.0001 -s 0 --uncond
 ```
 
 

@@ -116,7 +116,7 @@ def init_model_data_trainer(parser):
 
     # data
     for k, v in config.data.params.data_path_dict.items():
-        config.data.params.data_path_dict[k] = v.replace('{DATA_ROOT}', data_root).replace('{SEQ_LEN}', opt.seq_len)
+        config.data.params.data_path_dict[k] = v.replace('{DATA_ROOT}', data_root).replace('{SEQ_LEN}', str(opt.seq_len))
     data = instantiate_from_config(config.data)
     # NOTE according to https://pytorch-lightning.readthedocs.io/en/latest/datamodules.html
     # calling these ourselves should not be necessary but it is.
