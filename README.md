@@ -1,5 +1,6 @@
 ![Logo](./figures/TimeCraft2.png)
 
+
 https://github.com/user-attachments/assets/a1881005-b072-4657-80d0-813efe7068a5
 
 # Time Series Generation for Real-World Applications 
