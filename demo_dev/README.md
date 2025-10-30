@@ -6,7 +6,7 @@ Here is the source code for building the demo in the TimeCraft video on the home
 
 ## Usage 
 
-### 1. install the Node.js from https://nodejs.org
+### 1. Install the Node.js from https://nodejs.org
 
 
 ### 2. Install Dependencies
