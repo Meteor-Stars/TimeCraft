@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+//  Licensed under the MIT license.
+
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, BarChart, Bar } from 'recharts';
 import { RefreshCw, Brain, TrendingUp, Activity } from 'lucide-react';

@@ -1,3 +1,6 @@
+// Copyright (c) Microsoft Corporation.
+//  Licensed under the MIT license.
+
 import React, { useState } from 'react';
 import { Play, FileText, Activity } from 'lucide-react';
 import ModelOne from './components/ModelOne';
