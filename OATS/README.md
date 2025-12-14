@@ -37,8 +37,24 @@ Download dataset for TSFM from [here](https://huggingface.co/datasets/Qingren/TS
 ```
 
 #### Generation model training data
-Download extracted dataset from [here](https://huggingface.co/datasets/Theaper/diffusion-training-oats/resolve/main/extracted_diffusion_training_data_LOTSA100M.zip) for diffusion model. The dataset is extracted from the Lotsa100M dataset with a sampling rate 5% of the dataset in 20 selected subdatasets. The directory organization structure is as follows:
+Extracte dataset from for diffusion model. The dataset is extracted from the Lotsa100M dataset with a sampling rate 5% of the dataset in 20 selected subdatasets. 
 
+```bash
+python extract_data_generation.py -cp cli/conf/pretrain\
+                                  -cn default_ddp_val_enc\
+                                  model=encoder_10M\
+                                  model.enable_influence_scoring=true\
+                                  data=lotsa100M_weighted\
+                                  val_data=ettm1\
+                                  trainer.logger.project=TSFM_PRETRAIN\
+                                  run_name=encoder10M_ettm1_develop\
+                                  model.generate_after_epoch=0\
+                                  model.influence_filter_ratio=1.0\
+                                  model.select_from_generated=false\
+                                  trainer.max_epochs=0\
+                                  model.num_warmup_steps=0
+```
+The directory organization structure is as follows:
 ```bash
 extracted_label_patches_australian_electricity_demand.npy
 extracted_label_patches_azure_vm_traces_2017.npy
