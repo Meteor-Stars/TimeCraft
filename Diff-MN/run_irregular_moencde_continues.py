@@ -25,7 +25,7 @@ import os, sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 import logging
-from utils_mntsg.utils_data_continues import TimeDataset_irregular
+from utils_diffmn.utils_data_continues import TimeDataset_irregular
 import torch
 import torch.nn as nn
 import torch.nn.functional as F

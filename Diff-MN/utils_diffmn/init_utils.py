@@ -9,13 +9,13 @@ import time
 
 from pytorch_lightning import Trainer
 from omegaconf import OmegaConf
-from utils_mntsg.cli_utils import nondefault_trainer_args
-from utils_mntsg.callback_utils import prepare_trainer_configs
+from utils_diffmn.cli_utils import nondefault_trainer_args
+from utils_diffmn.callback_utils import prepare_trainer_configs
 from pytorch_lightning import seed_everything
 from ldm.util import instantiate_from_config
 from pathlib import Path
 import datetime
-from utils_mntsg.cli_utils import nondefault_trainer_args
+from utils_diffmn.cli_utils import nondefault_trainer_args
 
 # data_root = os.environ['DATA_ROOT']
 data_root='./data'

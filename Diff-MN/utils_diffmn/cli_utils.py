@@ -44,7 +44,7 @@ def parse_args_with_defaults():
 
     # 模拟命令行参数
     default_args = [
-        "--base", "configs/MNTSG.yaml",
+        "--base", "configs/Diff-MN.yaml",
         "--gpus", "6",
         "--logdir", "./logs/",
         "-sl", "168",

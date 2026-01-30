@@ -94,7 +94,7 @@ lightning:
 
 
 #    image_logger:
-#      target: utils_mntsg.callback_utils.TSLogger
+#      target: utils_diffmn.callback_utils.TSLogger
 #      params:
 #        batch_frequency: 2000
 #        max_images: 8

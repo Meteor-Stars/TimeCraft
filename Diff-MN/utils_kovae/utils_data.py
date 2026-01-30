@@ -18,7 +18,7 @@ import os
 import torch
 import controldiffeq
 import pathlib
-from utils_mntsg.dataset_polynomial import generate_polynomial_dataset
+from utils_diffmn.dataset_polynomial import generate_polynomial_dataset
 from utils_kovae import datautils
 PROJECT_DIR = pathlib.Path(__file__).resolve().parent.parent
 
