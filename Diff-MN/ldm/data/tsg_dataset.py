@@ -121,7 +121,7 @@ class TSGDataModule(pl.LightningDataModule):
                 data_path = f'./logs_irgen_moencde_final_ECG_womoe_baseline/{self.args.d_name}/MoeNcdeIrreg-seed=42-miss={self.args.miss_}seqlen=24epochs=30'
                 data_path_fix = f'./logs_irgen_moencde_final_ECG/{self.args.d_name}/MoeNcdeIrreg-seed=42-miss={self.args.miss_}seqlen=24epochs=30'
             else:
-                data_path=f'./logs_irgen_moencde_mntsg/{self.args.d_name}/MoeNcdeIrreg-seed=42-miss={self.args.miss_}seqlen={self.args.seq_len}epochs=30'
+                data_path=f'./logs_irgen_moencde_diffmn/{self.args.d_name}/MoeNcdeIrreg-seed=42-miss={self.args.miss_}seqlen={self.args.seq_len}epochs=30'
                 data_path_fix = f'./logs_irgen_moencde_final/{self.args.d_name}/MoeNcdeIrreg-seed=42-miss={self.args.miss_}seqlen={self.args.seq_len}epochs=30'
 
         else:

@@ -13,14 +13,14 @@ import os, sys
 import time
 
 from pytorch_lightning.trainer import Trainer
-from utils_mntsg.cli_utils import get_parser
-from utils_mntsg.init_utils import init_model_data_trainer
-from utils_mntsg.test_utils import test_model_with_diffcde
+from utils_diffmn.cli_utils import get_parser
+from utils_diffmn.init_utils import init_model_data_trainer
+from utils_diffmn.test_utils import test_model_with_diffcde
 
 
 if __name__ == "__main__":
     sys.argv = [
-        "--base", "configs/MNTSG.yaml",
+        "--base", "configs/Diff-MN.yaml",
         "--gpus", "0,",
         "--logdir", "./logs/",
         "-sl", "28",

@@ -233,7 +233,7 @@ def prepare_trainer_configs(nowname, logdir, opt, lightning_config, ckptdir, mod
                 "save_dir": logdir,
                 "offline": opt.debug,
                 "id": f"{nowname}_{now}",
-                "project": "MNTSG",
+                "project": "Diff-MN",
             }
         }
     }
@@ -280,7 +280,7 @@ def prepare_trainer_configs(nowname, logdir, opt, lightning_config, ckptdir, mod
     # add callback which sets up log directory
     default_callbacks_cfg = {
         "setup_callback": {
-            "target": "utils_mntsg.callback_utils.SetupCallback",
+            "target": "utils_diffmn.callback_utils.SetupCallback",
             "params": {
                 "resume": opt.resume,
                 "now": now,
@@ -298,7 +298,7 @@ def prepare_trainer_configs(nowname, logdir, opt, lightning_config, ckptdir, mod
             }
         },
         "cuda_callback": {
-            "target": "utils_mntsg.callback_utils.CUDACallback"
+            "target": "utils_diffmn.callback_utils.CUDACallback"
         },
     }
     if version.parse(pl.__version__) >= version.parse('1.4.0'):
