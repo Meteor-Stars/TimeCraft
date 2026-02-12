@@ -29,7 +29,20 @@ To adapt to new domains, TimeCraft employs a lightweight ​​Prototype Assignm
 3. [TimeCraft：面向真实世界的跨域泛化、文本可控与任务感知通用时间序列生成框架](https://mp.weixin.qq.com/s/aq3EqnNykXfNMz9LVyRpnw)
 
 ---
+## 🚀 News & Updates (2026)
 
+We are excited to announce three major research breakthroughs integrated into **TimeCraft**, significantly expanding the frontier of TSG toward **Causality**, **Foundation Models**, and **Continuous-time Modeling**:
+
+*   **[CaTSG] Causal Control via Diffusion Models:** We introduce **CaTSG**, a novel framework that incorporates causal constraints into the diffusion process. By moving beyond mere statistical correlation, CaTSG allows for the generation of realistic time series that adhere to underlying causal structures, facilitating robust "what-if" analysis and risk evaluation. 
+    [[Paper]](https://arxiv.org/pdf/2509.20846) | [[Code]](./CaTSG)
+
+*   **[OATS] Online Data Augmentation for TSFMs:** To empower the next generation of Time Series Foundation Models (TSFMs), we developed **OATS**. It provides a dynamic, online data augmentation engine that synthesizes model-tailored samples during pre-training, significantly improving the generalization and zero-shot performance of large-scale temporal models. 
+    [[Paper]](https://arxiv.org/pdf/2601.19040) | [[Code]](./OATS)
+
+*   **[MN-TSG] Continuous Generation with Irregular Observations:** Real-world data is often sparse and non-uniformly sampled. **MN-TSG** enables continuous-time generation by modeling latent physiological or physical dynamics, allowing the synthesis of realistic, high-fidelity temporal patterns even from highly irregular or incomplete observations. 
+    [[Paper]](https://arxiv.org/pdf/2601.13534) | [[Code]](./Diff-MN)
+
+---
 ## 🗺️ Framework Overview
 ![TimeDP framework overview.](./figures/overview_2.png)
 TimeCraft supports **three flexible input branches**. Users can **activate any one, any two, or all three inputs** depending on their application scenario:
@@ -68,15 +81,15 @@ Compared to other methods, TarDiff consistently generates data that leads to bet
 
 
 #### Controllability
-- [2026] Causal Time Series Generation via Diffusion Models, [Paper](https://arxiv.org/pdf/2509.20846) / [Code](CaTSG)
+- 🆕🔥[2026] Causal Time Series Generation via Diffusion Models, [Paper](https://arxiv.org/pdf/2509.20846) / [Code](CaTSG)
 - [ICML 2025] BRIDGE: Bootstrapping Text to Control Time-Series Generation via Multi-Agent Iterative Optimization and Diffusion Modelling, [Paper](https://arxiv.org/pdf/2503.02445) / [Code](BRIDGE)
 
 #### Adaptability
 - [KDD 2025] TarDiff: Target-Oriented Diffusion Guidance  for Synthetic Electronic Health Record  Time Series Generation, [Paper](https://arxiv.org/pdf/2504.17613) / [Code](TarDiff)
 
 #### General Time Series Techniques
-- [2026] OATS: Online Data Augmentation for Time Series Foundation Models, [Paper](https://arxiv.org/pdf/2601.19040) / [Code](OATS)
-- [2026] MN-TSG: Continuous Time Series Generation with Irregular Observations, [Paper](https://arxiv.org/pdf/2601.19040) / [Code](Diff-MN)
+- 🆕🔥[2026] OATS: Online Data Augmentation for Time Series Foundation Models, [Paper](https://arxiv.org/pdf/2601.19040) / [Code](OATS)
+- 🆕🔥[2026] MN-TSG: Continuous Time Series Generation with Irregular Observations, [Paper](https://arxiv.org/pdf/2601.13534) / [Code](Diff-MN)
 - [ICLR 2024] MG-TSD: Multi-granularity Time Series Diffusion Models with Guided Learning Process, [Paper](https://arxiv.org/pdf/2403.05751) / [Code](https://github.com/Hundredl/MG-TSD)
 - [TKDE 2025] TimeRAF: Retrieval-Augmented Foundation model for Zero-shot Time Series Forecasting, [Paper](https://arxiv.org/pdf/2412.20810)
 - [KDD 2025] InvDiff: Invariant Guidance for Bias Mitigation in Diffusion Models, [Paper](https://arxiv.org/pdf/2412.08480) / [Code](https://github.com/Hundredl/InvDiff)
