@@ -1,7 +1,6 @@
 ![Logo](./figures/TimeCraft2.png)
 
-
-https://github.com/user-attachments/assets/a1881005-b072-4657-80d0-813efe7068a5
+https://github.com/user-attachments/assets/35bc7ee3-f7a2-4949-96fc-1d1b977e0df1
 
 # Time Series Generation for Real-World Applications 
 The rapid advancement of artificial intelligence has increasingly emphasized the critical role of time series data in powering intelligent decision-making across diverse domains, including healthcare, finance, energy, and transportation. In these fields, the ability to generate high-quality synthetic time series has become particularly valuable. **Time series generation** technology plays a vital role in alleviating **data scarcity**, especially in scenarios where collecting real-world data is expensive, time-consuming, or impractical. It also enables **privacy-preserving** analysis by producing realistic but non-identifiable synthetic data, reducing the risks associated with sharing sensitive information. Moreover, it supports **simulation and forecasting in risk-free environments**, allowing researchers and practitioners to safely explore hypothetical scenarios and train robust models. Together, these capabilities make time series generation an essential tool for a wide range of real-world applications.
@@ -69,19 +68,22 @@ Compared to other methods, TarDiff consistently generates data that leads to bet
 
 
 #### Controllability
+- [2026] Causal Time Series Generation via Diffusion Models, [Paper](https://arxiv.org/pdf/2509.20846) / [Code](CaTSG)
 - [ICML 2025] BRIDGE: Bootstrapping Text to Control Time-Series Generation via Multi-Agent Iterative Optimization and Diffusion Modelling, [Paper](https://arxiv.org/pdf/2503.02445) / [Code](BRIDGE)
 
 #### Adaptability
 - [KDD 2025] TarDiff: Target-Oriented Diffusion Guidance  for Synthetic Electronic Health Record  Time Series Generation, [Paper](https://arxiv.org/pdf/2504.17613) / [Code](TarDiff)
 
 #### General Time Series Techniques
+- [2026] OATS: Online Data Augmentation for Time Series Foundation Models, [Paper](https://arxiv.org/pdf/2601.19040) / [Code](OATS)
+- [2026] MN-TSG: Continuous Time Series Generation with Irregular Observations, [Paper](https://arxiv.org/pdf/2601.19040) / [Code](Diff-MN)
 - [ICLR 2024] MG-TSD: Multi-granularity Time Series Diffusion Models with Guided Learning Process, [Paper](https://arxiv.org/pdf/2403.05751) / [Code](https://github.com/Hundredl/MG-TSD)
-- [TKDE] TimeRAF: Retrieval-Augmented Foundation model for Zero-shot Time Series Forecasting, [Paper](https://arxiv.org/pdf/2412.20810)
--	[KDD 2025] InvDiff: Invariant Guidance for Bias Mitigation in Diffusion Models, [Paper](https://arxiv.org/pdf/2412.08480) / [Code](https://github.com/Hundredl/InvDiff)
+- [TKDE 2025] TimeRAF: Retrieval-Augmented Foundation model for Zero-shot Time Series Forecasting, [Paper](https://arxiv.org/pdf/2412.20810)
+- [KDD 2025] InvDiff: Invariant Guidance for Bias Mitigation in Diffusion Models, [Paper](https://arxiv.org/pdf/2412.08480) / [Code](https://github.com/Hundredl/InvDiff)
 
 #### Finance Application
 
-- Controllable Financial Market Generation with Diffusion Guided Meta Agent, [Paper](https://arxiv.org/pdf/2408.12991) / [Code](DiGA)
+- [AAAI 2026] Controllable Financial Market Generation with Diffusion Guided Meta Agent, [Paper](https://arxiv.org/pdf/2408.12991) / [Code](DiGA)
 - [ICLR 2025] MarS: a Financial Market Simulation Engine Powered by Generative Foundation Model, [Paper](https://arxiv.org/pdf/2409.07486)
 
 
