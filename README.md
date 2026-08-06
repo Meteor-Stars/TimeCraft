@@ -39,7 +39,7 @@ We are excited to announce three major research breakthroughs integrated into **
 *   **[OATS] Online Data Augmentation for TSFMs:** To empower the next generation of Time Series Foundation Models (TSFMs), we developed **OATS**. It provides a dynamic, online data augmentation engine that synthesizes model-tailored samples during pre-training, significantly improving the generalization and zero-shot performance of large-scale temporal models. 
     [[Paper]](https://arxiv.org/pdf/2601.19040) | [[Code]](./OATS)
 
-*   **[Diff-MN] Continuous Generation with Irregular Observations:** Real-world data is often sparse and non-uniformly sampled. **Diff-MN** enables continuous-time generation by modeling latent physiological or physical dynamics, allowing the synthesis of realistic, high-fidelity temporal patterns even from highly irregular or incomplete observations. 
+* **[Diff-MN] Continuous Generation with Irregular Observations:** Real-world time-series observations are often sparse and irregularly sampled. **Diff-MN** models latent physiological or physical dynamics to generate realistic, continuous, high-resolution time series from sparse and irregularly sampled observations.
     [[Paper]](https://arxiv.org/pdf/2601.13534) | [[Code]](./Diff-MN)
 
 ---
