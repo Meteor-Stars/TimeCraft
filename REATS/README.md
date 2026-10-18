@@ -1,5 +1,7 @@
 # REATS: LLM Reasoning-based Ensemble Learning for Adaptive Time Series Forecasting
 
+REATS uses a lightweight 1.7B LLM as an interpretable ensemble router for time series forecasting. It combines textual temporal descriptions, numerical features, and retrieved similar-sample priors to generate sample-adaptive weights, using rule-based chain-of-thought supervision and SFT followed by GRPO with reciprocal reward mapping. Experiments on eight benchmarks demonstrate improved performance over competitive ensemble baselines across foundation-model and small-model candidate groups, alongside natural-language explanations, cross-dataset transfer, and generalization to unseen candidate models.
+
 The paper is available at [[Paper]](https://arxiv.org/pdf/2608.10149).
 
 ## 1. Generate Base Model Predictions
